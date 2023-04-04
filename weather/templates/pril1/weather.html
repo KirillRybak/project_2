@@ -4,21 +4,21 @@
 {% endblock %}
 {% block content %}
 <div class="contrainer mt-5">
-    <div row="row">
+    <div   >
         <div class="col-5 offset-1">
             <form action="">
                 <label for="city">Город</label>
                 <input type="text" id="city" class="form-control" name="city" placeholder="Введите город">
                 <input type="submit" name="send" value="Узнать" class="mt-2 btn btn-dnage">
             </form>
-            <div class="col-4 offset-1">
+            <div class="float-right" >
                 <h1>Информация</h1>
                 <div class="alert alert-danger">
                     <div class="alert alert-danger">
                         <b>Город:</b>{{ info.city }}<br>
-                        <b>Температура:</b>{{ info.temp }}<sup>0</sup><br>
-                        <b>Максимальная температура в моменте:</b>{{ info.max_temp }}<br>
-                        <img src="http://openweathermap.org/img/w{{}}.png" alt="Фото погоды" class="img-thunbnail">
+                        <b>Температура:</b>{{ info.temp }}<sup>o</sup><br>
+                        <b>Максимальная температура в моменте:</b>{{ info.temp_max }}<br>
+                        <img src="http://openweathermap.org/img/w{{ info.icon }}.png" alt="Фото погоды" class="img-thunbnail">
 
                     </div>
                 </div>
@@ -28,3 +28,4 @@
 </div>
 
 {% endblock %}
+col-4 offset-1
